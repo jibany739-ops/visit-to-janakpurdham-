@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Visit Janakpur | The Heart of Mithila</title>
+
+<meta name="description"
+content="Discover Janakpur - temples, sacred ponds, Mithila art, culture and beautiful places to visit.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fffaf3;
+    color:#29201b;
+    overflow-x:hidden;
+}
+
+:root{
+    --gold:#f4b942;
+    --orange:#e87528;
+    --red:#a83232;
+    --cream:#fff8eb;
+    --dark:#20130d;
+    --white:#ffffff;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title span{
+    color:var(--orange);
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:14px;
+}
+
+.section-title h2{
+    font-family:'Playfair Display',serif;
+    font-size:45px;
+    margin-top:10px;
+}
+
+.section-title p{
+    max-width:650px;
+    margin:15px auto;
+    color:#777;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:18px 0;
+    background:rgba(20,10,5,.55);
+    backdrop-filter:blur(15px);
+    transition:.4s;
+}
+
+.nav-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:800;
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.menu{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+
+    background:
+    linear-gradient(
+        rgba(30,10,3,.58),
+        rgba(30,10,3,.68)
+    ),
+    url("https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=2000&q=85");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.hero-content{
+    width:90%;
+    max-width:900px;
+    animation:heroIn 1.5s ease;
+}
+
+.hero-small{
+    color:#ffd56a;
+    font-size:16px;
+    font-weight:600;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(50px,8vw,100px);
+    line-height:1;
+    margin:20px 0;
+}
+
+.hero h1 span{
+    color:#ffd15a;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    color:#f5eee9;
+}
+
+.hero-buttons{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 28px;
+    border-radius:50px;
+    font-weight:600;
+    display:inline-block;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,#f5c04d,#e87528);
+    color:white;
+    box-shadow:0 10px 30px rgba(232,117,40,.3);
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.7);
+    color:white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:#333;
+}
+
+.scroll{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    animation:bounce 2s infinite;
+    font-size:13px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    background:#fffaf3;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-img{
+    position:relative;
+}
+
+.about-img img{
+    height:500px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:20px 20px 0 #f3d79c;
+}
+
+.about-text h3{
+    font-family:'Playfair Display',serif;
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:#666;
+    line-height:1.9;
+    margin-bottom:18px;
+}
+
+.stats{
+    display:flex;
+    gap:30px;
+    margin-top:30px;
+}
+
+.stat h4{
+    color:var(--orange);
+    font-size:28px;
+}
+
+.stat p{
+    margin:0;
+    font-size:13px;
+}
+
+
+/* =========================
+   PLACES
+========================= */
+
+.places{
+    background:#21130d;
+    color:white;
+}
+
+.places .section-title p{
+    color:#bbb;
+}
+
+.place-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.place-card{
+    background:#302019;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.place-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+.place-card img{
+    height:220px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.place-card:hover img{
+    transform:scale(1.08);
+}
+
+.place-content{
+    padding:22px;
+}
+
+.place-content h3{
+    font-family:'Playfair Display',serif;
+    font-size:23px;
+    margin-bottom:10px;
+}
+
+.place-content p{
+    color:#bcb2ad;
+    font-size:14px;
+    line-height:1.7;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience{
+    background:#fff;
+}
+
+.experience-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.experience-card{
+    padding:35px 25px;
+    border-radius:20px;
+    background:#fffaf3;
+    text-align:center;
+    border:1px solid #f1e2cb;
+    transition:.3s;
+}
+
+.experience-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.icon{
+    width:75px;
+    height:75px;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:linear-gradient(135deg,#ffd86b,#e87528);
+    font-size:32px;
+}
+
+.experience-card h3{
+    margin-bottom:12px;
+}
+
+.experience-card p{
+    color:#777;
+    line-height:1.7;
+    font-size:14px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+    background:#f8eee1;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-auto-rows:220px;
+    gap:15px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:15px;
+    position:relative;
+}
+
+.gallery-item:nth-child(1){
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+.gallery-item:nth-child(4){
+    grid-column:span 2;
+}
+
+.gallery-item img{
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.12);
+}
+
+.gallery-overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:25px;
+    color:white;
+    background:linear-gradient(transparent,rgba(0,0,0,.8));
+}
+
+
+/* =========================
+   TRAVEL INFO
+========================= */
+
+.travel{
+    background:#fffaf3;
+}
+
+.travel-box{
+    background:
+    linear-gradient(135deg,#a83232,#e87528);
+    color:white;
+    border-radius:30px;
+    padding:55px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.travel-box h2{
+    font-family:'Playfair Display',serif;
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.travel-box p{
+    line-height:1.8;
+    color:#ffe8d5;
+}
+
+.travel-list{
+    display:grid;
+    gap:15px;
+}
+
+.travel-item{
+    background:rgba(255,255,255,.12);
+    padding:18px;
+    border-radius:12px;
+}
+
+.travel-item strong{
+    display:block;
+    margin-bottom:4px;
+}
+
+
+/* =========================
+   MAP
+========================= */
+
+.map-section{
+    padding-bottom:100px;
+}
+
+.map{
+    width:100%;
+    height:450px;
+    border:0;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:#21130d;
+    color:white;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.contact-info h2{
+    font-family:'Playfair Display',serif;
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    color:#b9aeaa;
+    line-height:1.8;
+}
+
+.contact-details{
+    margin-top:30px;
+    display:grid;
+    gap:18px;
+}
+
+.contact-item{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.contact-icon{
+    width:48px;
+    height:48px;
+    background:#3b261c;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.contact-form{
+    background:#302019;
+    padding:35px;
+    border-radius:25px;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group input,
+.input-group textarea{
+    width:100%;
+    padding:15px 18px;
+    border:1px solid #57443a;
+    background:#21130d;
+    color:white;
+    border-radius:10px;
+    outline:none;
+    font-family:inherit;
+}
+
+.input-group textarea{
+    height:130px;
+    resize:none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+    border-color:var(--gold);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#120b07;
+    color:#82766f;
+    text-align:center;
+    padding:25px;
+    font-size:13px;
+}
+
+footer span{
+    color:#f4b942;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes heroIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translate(-50%,0);
+    }
+    50%{
+        transform:translate(-50%,10px);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        right:5%;
+        width:230px;
+        padding:20px;
+        background:#21130d;
+        border-radius:15px;
+        display:none;
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .about-grid,
+    .travel-box,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .place-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .experience-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .section{
+        padding:70px 0;
+    }
+
+    .section-title h2{
+        font-size:35px;
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .about-img img{
+        height:350px;
+    }
+
+    .place-grid,
+    .experience-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+        grid-auto-rows:250px;
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(4){
+        grid-column:span 1;
+        grid-row:span 1;
+    }
+
+    .travel-box{
+        padding:30px;
+    }
+
+    .travel-box h2{
+        font-size:32px;
+    }
+
+    .contact-info h2{
+        font-size:35px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+<div class="nav-container">
+
+<a href="#" class="logo">
+Visit<span>Janakpur</span>
+</a>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#places">Places</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="hero-small">
+Welcome to Janakpurdham
+</div>
+
+<h1>
+Discover <span>Janakpur</span>
+</h1>
+
+<p>
+Explore the spiritual heart of Mithila — where magnificent
+temples, sacred ponds, colorful art and ancient traditions
+come together.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#places" class="btn btn-primary">
+Explore Places →
+</a>
+
+<a href="#about" class="btn btn-outline">
+Discover Janakpur
+</a>
+
+</div>
+
+</div>
+
+<div class="scroll">
+↓ Scroll to explore
+</div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section about" id="about">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>About Janakpur</span>
+
+<h2>The Heart of Mithila</h2>
+
+<p>
+A city of temples, ponds, art, culture and unforgettable
+heritage.
+</p>
+
+</div>
+
+
+<div class="about-grid">
+
+<div class="about-img">
+
+<img
+src="d:\jiban\jjj.jpeg"
+alt="Beautiful temple">
+
+</div>
+
+
+<div class="about-text">
+
+<h3>
+Where History Meets Culture
+</h3>
+
+<p>
+Janakpur, also known as Janakpurdham, is one of Nepal's
+important cultural and religious destinations. It is closely
+associated with the ancient Mithila kingdom and the story of
+Goddess Sita.
+</p>
+
+<p>
+The city is famous for its magnificent Janaki Mandir,
+sacred ponds, traditional Mithila paintings, festivals and
+Maithili culture.
+</p>
+
+<p>
+Whether you are interested in history, spirituality,
+architecture, photography or local culture, Janakpur offers
+something memorable for every visitor.
+</p>
+
+
+<div class="stats">
+
+<div class="stat">
+<h4>115+</h4>
+<p>Historic Ponds</p>
+</div>
+
+<div class="stat">
+<h4>100+</h4>
+<p>Temples & Shrines</p>
+</div>
+
+<div class="stat">
+<h4>∞</h4>
+<p>Culture & Stories</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PLACES
+========================= -->
+
+<section class="section places" id="places">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Explore</span>
+
+<h2>Places to Visit</h2>
+
+<p>
+Discover some of the most interesting places around Janakpur.
+</p>
+
+</div>
+
+
+<div class="place-grid">
+
+
+<div class="place-card">
+
+<img
+src="d:\jiban\explore madesh.jpg"
+alt="Janaki Mandir">
+
+<div class="place-content">
+
+<h3>🏛️ Janaki Mandir</h3>
+
+<p>
+The iconic temple dedicated to Goddess Sita and one of
+Janakpur's most famous landmarks.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="place-card">
+
+<img
+src="d:\jiban\ganga sagar.jpg"
+alt="Ganga Sagar">
+
+<div class="place-content">
+
+<h3>🌊 Ganga Sagar</h3>
+
+<p>
+A sacred pond near the temple area and an important
+place for religious and cultural activities.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="place-card">
+
+<img
+src="d:\jiban\ram mandir.jpg"
+alt="Ram Mandir">
+
+<div class="place-content">
+
+<h3>🛕 Ram Mandir</h3>
+
+<p>
+Explore the traditional temple architecture and
+spiritual atmosphere of this historic shrine.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="place-card">
+
+<img
+src="d:\jiban\mithila art.webp"
+alt="Mithila Art">
+
+<div class="place-content">
+
+<h3>🎨 Mithila Art</h3>
+
+<p>
+Experience colorful traditional paintings and the
+living artistic culture of the Mithila region.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCES
+========================= -->
+
+<section class="section experience">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Experience</span>
+
+<h2>Things To Experience</h2>
+
+<p>
+Don't just visit Janakpur — experience its culture.
+</p>
+
+</div>
+
+
+<div class="experience-grid">
+
+
+<div class="experience-card">
+
+<div class="icon">🎨</div>
+
+<h3>Mithila Art</h3>
+
+<p>
+Discover traditional Mithila paintings, patterns,
+colors and local artistic traditions.
+</p>
+
+</div>
+
+
+<div class="experience-card">
+
+<div class="icon">🙏</div>
+
+<h3>Temple Tour</h3>
+
+<p>
+Visit Janaki Mandir, Ram Mandir, Vivah Mandap and
+other historic religious sites.
+</p>
+
+</div>
+
+
+<div class="experience-card">
+
+<div class="icon">🌅</div>
+
+<h3>Sacred Ponds</h3>
+
+<p>
+Enjoy the peaceful atmosphere around Ganga Sagar,
+Dhanusha Sagar and other historic ponds.
+</p>
+
+</div>
+
+
+<div class="experience-card">
+
+<div class="icon">📸</div>
+
+<h3>Photography</h3>
+
+<p>
+Capture beautiful architecture, colorful streets,
+festivals and Mithila culture.
+</p>
+
+</div>
+
+
+<div class="experience-card">
+
+<div class="icon">🍛</div>
+
+<h3>Local Food</h3>
+
+<p>
+Taste traditional Maithili and Terai dishes while
+exploring local markets.
+</p>
+
+</div>
+
+
+<div class="experience-card">
+
+<div class="icon">🎉</div>
+
+<h3>Festivals</h3>
+
+<p>
+Experience the colorful atmosphere of festivals such
+as Vivah Panchami and Chhath.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="section gallery" id="gallery">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Visual Journey</span>
+
+<h2>Beautiful Janakpur</h2>
+
+<p>
+A glimpse of the colors, architecture and culture of
+Janakpurdham.
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=85"
+alt="Janakpur">
+
+<div class="">
+<h3>Heritage</h3>
+</div>
+
+</div>
+
+
+<div class="d:\jiban\jnk t.jpeg">
+
+<img
+src="d:\jiban\Janakintemple.webp"
+alt="Temple">
+
+<div class="gallery-overlay">
+<h3>Temples</h3>
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="d:\jiban\WhatsApp Image 2026-09-22 at 7.50.48 PM.jpeg"
+alt="Architecture">
+
+<div class="gallery-overlay">
+<h3>Architecture</h3>
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="d:\jiban\culture.jpeg"
+alt="Culture">
+
+<div class="gallery-overlay">
+<h3>Mithila Culture</h3>
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85"
+alt="Travel">
+
+<div class="gallery-overlay">
+<h3>Explore</h3>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     TRAVEL INFO
+========================= -->
+
+<section class="section travel">
+
+<div class="container">
+
+<div class="travel-box">
+
+<div>
+
+<h2>
+Plan Your Janakpur Visit
+</h2>
+
+<p>
+Make your journey comfortable by planning your transport,
+places and activities before exploring the city.
+</p>
+
+</div>
+
+
+<div class="travel-list">
+
+<div class="travel-item">
+<strong>✈️ By Air</strong>
+Janakpur Airport connects the city with Kathmandu.
+</div>
+
+<div class="travel-item">
+<strong>🚌 By Road</strong>
+Regular buses and road transportation connect Janakpur
+with other cities.
+</div>
+
+<div class="travel-item">
+<strong>🚶 Explore</strong>
+Many central heritage attractions can be explored around
+the main temple area.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     LOCATION
+========================= -->
+
+<section class="section map-section" id="location">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Find Us</span>
+
+<h2>Location of Janakpur</h2>
+
+<p>
+Janakpurdham is located in Dhanusha District of Madhesh
+Province, Nepal.
+</p>
+
+</div>
+
+
+<iframe
+class="map"
+src="https://www.google.com/maps?q=Janaki+Mandir,+Janakpur,+Nepal&output=embed"
+loading="lazy"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section contact" id="contact">
+
+<div class="container">
+
+<div class="contact-grid">
+
+
+<div class="contact-info">
+
+<h2>
+Let's Explore Janakpur
+</h2>
+
+<p>
+Have a question about visiting Janakpur? Send us a
+message and plan your next cultural journey.
+</p>
+
+
+<div class="contact-details">
+
+<div class="contact-item">
+
+<div class="contact-icon">📍</div>
+
+<div>
+<strong>Location</strong>
+<p>Janakpurdham, Dhanusha, Nepal</p>
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">📧</div>
+
+<div>
+<strong>Email</strong>
+<p>jibany739@gmail.com</p>
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">📞</div>
+
+<div>
+<strong>Phone</strong>
+<p>+977 9811981416</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="contact-form">
+
+<form onsubmit="sendMessage(event)">
+
+<div class="input-group">
+
+<input
+type="text"
+placeholder="Your Name"
+required>
+
+</div>
+
+
+<div class="input-group">
+
+<input
+type="email"
+placeholder="Your Email"
+required>
+
+</div>
+
+
+<div class="input-group">
+
+<textarea
+placeholder="Your Message"
+required></textarea>
+
+</div>
+
+
+<button class="btn btn-primary" type="submit">
+Send Message ✈️
+</button>
+
+</form>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<p>
+© 2026 <span>Visit Janakpur</span> |
+Explore the Heart of Mithila 🇳🇵
+</p>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+
+}
+
+
+function sendMessage(event){
+
+    event.preventDefault();
+
+    alert(
+        "Thank you for contacting Visit Janakpur! 🌸\n\nYour message has been received."
+    );
+
+}
+
+
+window.addEventListener("scroll",function(){
+
+    const nav = document.querySelector("nav");
+
+    if(window.scrollY > 80){
+
+        nav.style.background = "rgba(20,10,5,.92)";
+        nav.style.padding = "12px 0";
+
+    }else{
+
+        nav.style.background = "rgba(20,10,5,.55)";
+        nav.style.padding = "18px 0";
+
+    }
+
+});
+
+
+/* Close mobile menu after clicking */
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click",function(){
+
+        document
+        .getElementById("navLinks")
+        .classList
+        .remove("active");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
